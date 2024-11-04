@@ -6,10 +6,10 @@ BanditClan.PrivateMilitia = BanditClan.PrivateMilitia or {}
 BanditClan.PrivateMilitia.id = 14
 
 -- Name of the clan
-BanditClan.PrivateMilitia.name = "Private Militia"
+BanditClan.PrivateMilitia.name = "WLF"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.PrivateMilitia.femaleChance = 0
+BanditClan.PrivateMilitia.femaleChance = 40
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
 BanditClan.PrivateMilitia.health = 6
@@ -21,7 +21,7 @@ BanditClan.PrivateMilitia.eatBody = false
 BanditClan.PrivateMilitia.accuracyBoost = 1.1
 
 -- Favorite zones 
-BanditClan.PrivateMilitia.favoriteZones = {"Nav"}
+BanditClan.PrivateMilitia.favoriteZones = {"TownZone", "Nav"}
 BanditClan.PrivateMilitia.avoidZones = {"Forest", "DeepForest"}
 
 -- available outfits
@@ -51,11 +51,15 @@ BanditClan.PrivateMilitia.Secondary = BanditClan.PrivateMilitia.Secondary or Ban
 -- loot table
 BanditClan.PrivateMilitia.Loot = BanditClan.PrivateMilitia.Loot or {}
 
+-- equipment
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Necklace_DogTag", 100))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Battery", 88))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 99))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 60))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Radio.WalkieTalkie5", 10))
+
+-- medical
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Disinfectant", 99))
@@ -64,45 +68,26 @@ table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Pencil", 
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.SutureNeedle", 35))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.SutureNeedleHolder", 35))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Tweezers", 11))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Toothbrush", 33))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Toothpaste", 33))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 66))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 10))
 
+-- food
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Gum", 14))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 66))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Coffee2", 22))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Teabag2", 55))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.MugWhite", 22))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 22))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Fork", 77))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Spoon", 77))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.SugarPacket", 66))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.SugarPacket", 66))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Chocolate", 33))
 
 if getActivatedMods():contains("ExpandedHelicopterEvents") then
     table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 80))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 80))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 70))
     table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 10))
 elseif getActivatedMods():contains("MREM") then
     table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("MREM.MRE", 60))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("MREM.MRE", 60))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("MREM.MRE", 50))
     table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("MREM.MRE", 10))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("MREM.MREBox", 10))
 else
     table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 70))
     table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 10))
-end
-
-for i=1, 37 do
-    table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Money", 66))
 end
 
 -- register this clan for spawn system

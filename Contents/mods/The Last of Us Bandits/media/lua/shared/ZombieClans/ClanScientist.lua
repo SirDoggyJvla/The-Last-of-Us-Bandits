@@ -6,7 +6,7 @@ BanditClan.Scientist = BanditClan.Scientist or {}
 BanditClan.Scientist.id = 12
 
 -- Name of the clan
-BanditClan.Scientist.name = "Scientist"
+BanditClan.Scientist.name = "Fireflies"
 
 -- % chance of a clan member to be a female. Outfit must support it.
 BanditClan.Scientist.femaleChance = 60

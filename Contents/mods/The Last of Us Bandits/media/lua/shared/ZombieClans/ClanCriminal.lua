@@ -6,10 +6,10 @@ BanditClan.Criminal = BanditClan.Criminal or {}
 BanditClan.Criminal.id = 4
 
 -- Name of the clan
-BanditClan.Criminal.name = "Criminal"
+BanditClan.Criminal.name = "Rattlers"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.Criminal.femaleChance = 0
+BanditClan.Criminal.femaleChance = 15
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
 BanditClan.Criminal.health = 3
@@ -30,26 +30,12 @@ table.insert(BanditClan.Criminal.Outfits, "Thug")
 table.insert(BanditClan.Criminal.Outfits, "Redneck")
 table.insert(BanditClan.Criminal.Outfits, "Young")
 
-if getActivatedMods():contains("Authentic Z - Current") then
-    table.insert(BanditClan.Criminal.Outfits, "AuthenticBankRobber")
-    table.insert(BanditClan.Criminal.Outfits, "AuthenticNMRIHMolotov")
-    table.insert(BanditClan.Criminal.Outfits, "AuthenticPoncho")
-end
-
-if getActivatedMods():contains("Brita_2") then
-    table.insert(BanditClan.Criminal.Outfits, "Brita_Killa_2")
-end
-
 -- available melee weapons
 BanditClan.Criminal.Melee = BanditClan.Criminal.Melee or {}
 table.insert(BanditClan.Criminal.Melee, "Base.Crowbar")
 table.insert(BanditClan.Criminal.Melee, "Base.MetalBar")
 table.insert(BanditClan.Criminal.Melee, "Base.BaseballBat")
 table.insert(BanditClan.Criminal.Melee, "Base.KitchenKnife")
-
-if getActivatedMods():contains("Authentic Z - Current") then
-    table.insert(BanditClan.Criminal.Melee, "AuthenticZClothing.Chainsaw")
-end
 
 -- available primary weapons
 BanditClan.Criminal.Primary = BanditClan.Criminal.Primary or BanditWeapons.Primary
@@ -97,10 +83,6 @@ table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedPotato", 
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedTomato", 1))
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedEggplant", 1))
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedBellPepper", 1))
-
-for i=1, 37 do
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Money", 66))
-end
 
 for i=1, 4  do
     table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Right_MiddleFinger_GoldDiamond", 77))

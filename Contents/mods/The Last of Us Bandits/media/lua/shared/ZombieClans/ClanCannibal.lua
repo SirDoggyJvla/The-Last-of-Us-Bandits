@@ -6,10 +6,10 @@ BanditClan.Cannibal = BanditClan.Cannibal or {}
 BanditClan.Cannibal.id = 3
 
 -- Name of the clan
-BanditClan.Cannibal.name = "Cannibal"
+BanditClan.Cannibal.name = "Cannibals"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.Cannibal.femaleChance = 0
+BanditClan.Cannibal.femaleChance = 50
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
 BanditClan.Cannibal.health = 2

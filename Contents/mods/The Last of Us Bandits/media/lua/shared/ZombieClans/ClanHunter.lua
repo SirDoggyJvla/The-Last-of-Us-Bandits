@@ -6,23 +6,23 @@ BanditClan.Hunter = BanditClan.Hunter or {}
 BanditClan.Hunter.id = 10
 
 -- Name of the clan
-BanditClan.Hunter.name = "Hunter"
+BanditClan.Hunter.name = "Hunters"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.Hunter.femaleChance = 0
+BanditClan.Hunter.femaleChance = 15
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
-BanditClan.Hunter.health = 4
+BanditClan.Hunter.health = 2
 
 -- if the bandit will eat player's body after death
 BanditClan.Hunter.eatBody = false
 
 -- Ranged weapon accuracy multiplayer (1=default)
-BanditClan.Hunter.accuracyBoost = 1.1
+BanditClan.Hunter.accuracyBoost = 0.8
 
 -- Favorite zones 
-BanditClan.Hunter.favoriteZones = {"Forest", "DeepForest"}
-BanditClan.Hunter.avoidZones = {"TownZone", "Nav"}
+BanditClan.Hunter.favoriteZones = {"TownZone", "Nav"}
+BanditClan.Hunter.avoidZones = {}
 
 -- available outfits
 BanditClan.Hunter.Outfits = BanditClan.Hunter.Outfits or {}
@@ -30,6 +30,7 @@ table.insert(BanditClan.Hunter.Outfits, "Hunter")
 
 -- available melee weapons
 BanditClan.Hunter.Melee = BanditClan.Hunter.Melee or {}
+table.insert(BanditClan.Hunter.Melee, "Base.KitchenKnife")
 table.insert(BanditClan.Hunter.Melee, "Base.HuntingKnife")
 table.insert(BanditClan.Hunter.Melee, "Base.Machete")
 table.insert(BanditClan.Hunter.Melee, "Base.HandAxe")

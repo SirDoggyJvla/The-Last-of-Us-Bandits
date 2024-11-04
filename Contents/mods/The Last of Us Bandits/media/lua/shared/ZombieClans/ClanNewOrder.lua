@@ -1,3 +1,10 @@
+
+-- requirements
+local TLOU_Bandits = require "TLOU_Bandits"
+require "BanditWeapons"
+
+
+
 BanditClan = BanditClan or {}
 
 BanditClan.NewOrder = BanditClan.NewOrder or {}
@@ -6,10 +13,10 @@ BanditClan.NewOrder = BanditClan.NewOrder or {}
 BanditClan.NewOrder.id = 16
 
 -- Name of the clan
-BanditClan.NewOrder.name = "New Order"
+BanditClan.NewOrder.name = "FEDRA"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.NewOrder.femaleChance = 0
+BanditClan.NewOrder.femaleChance = 40
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
 BanditClan.NewOrder.health = 6
@@ -21,26 +28,22 @@ BanditClan.NewOrder.eatBody = false
 BanditClan.NewOrder.accuracyBoost = 1.4
 
 -- Favorite zones 
-BanditClan.NewOrder.favoriteZones = {}
-BanditClan.NewOrder.avoidZones = {}
+BanditClan.NewOrder.favoriteZones = {"TownZone", "Nav"}
+BanditClan.NewOrder.avoidZones = {"Forest", "DeepForest"}
 
 -- hairstyles, nil for default
 BanditClan.NewOrder.hairStyles = {"Bald", "Fresh", "Demi", "FlatTop", "MohawkShort"}
 
 -- available outfits
 BanditClan.NewOrder.Outfits = BanditClan.NewOrder.Outfits or {}
-if getActivatedMods():contains("KATTAJ1_Military") then
-    table.insert(BanditClan.NewOrder.Outfits, "KATTAJ1_Army_Black_Patriot")
-    table.insert(BanditClan.NewOrder.Outfits, "KATTAJ1_Army_Black_Defender")
-    table.insert(BanditClan.NewOrder.Outfits, "KATTAJ1_Army_Black_Vanguard")
-    table.insert(BanditClan.NewOrder.Outfits, "KATTAJ1_Army_Green_Patriot")
-    table.insert(BanditClan.NewOrder.Outfits, "KATTAJ1_Army_Green_Defender")
-    table.insert(BanditClan.NewOrder.Outfits, "KATTAJ1_Army_Green_Vanguard")
-else
-    table.insert(BanditClan.NewOrder.Outfits, "ArmyCamoGreen")
-    table.insert(BanditClan.NewOrder.Outfits, "ZSArmySpecialOps")
-    -- table.insert(BanditClan.NewOrder.Outfits, "Ghillie")
-end
+table.insert(BanditClan.NewOrder.Outfits, "FEDRAHAZMAT")
+table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
+table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
+table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
+table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
+table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
+table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
+
 
 -- available melee weapons
 BanditClan.NewOrder.Melee = BanditClan.NewOrder.Melee or {}

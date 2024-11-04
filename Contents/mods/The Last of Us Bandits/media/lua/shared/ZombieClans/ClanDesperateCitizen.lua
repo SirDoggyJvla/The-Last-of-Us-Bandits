@@ -6,10 +6,10 @@ BanditClan.DesperateCitizen = BanditClan.DesperateCitizen or {}
 BanditClan.DesperateCitizen.id = 1
 
 -- Name of the clan
-BanditClan.DesperateCitizen.name = "Desperate Cizizen"
+BanditClan.DesperateCitizen.name = "Jackson's Community"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.DesperateCitizen.femaleChance = 40
+BanditClan.DesperateCitizen.femaleChance = 50
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
 BanditClan.DesperateCitizen.health = 2
