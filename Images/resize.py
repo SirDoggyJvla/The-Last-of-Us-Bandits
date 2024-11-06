@@ -19,5 +19,5 @@ def resize_images_in_folder(folder_path, width, height):
 
 # Example usage
 folder_path = r'C:\Users\simon\Zomboid\Workshop\The Last of Us Bandits\Images\factions'  # Replace with your folder path
-width, height = 256, 256  # Desired resolution (width, height)
+width, height = 200, 200  # Desired resolution (width, height)
 resize_images_in_folder(folder_path, width, height)
