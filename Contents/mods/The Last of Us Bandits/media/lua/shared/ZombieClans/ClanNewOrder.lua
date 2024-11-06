@@ -1,10 +1,3 @@
-
--- requirements
-local TLOU_Bandits = require "TLOU_Bandits"
-require "BanditWeapons"
-
-
-
 BanditClan = BanditClan or {}
 
 BanditClan.NewOrder = BanditClan.NewOrder or {}
@@ -19,7 +12,7 @@ BanditClan.NewOrder.name = "FEDRA"
 BanditClan.NewOrder.femaleChance = 40
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
-BanditClan.NewOrder.health = 6
+BanditClan.NewOrder.health = 8
 
 -- if the bandit will eat player's body after death
 BanditClan.NewOrder.eatBody = false
@@ -28,14 +21,14 @@ BanditClan.NewOrder.eatBody = false
 BanditClan.NewOrder.accuracyBoost = 1.4
 
 -- Favorite zones 
-BanditClan.NewOrder.favoriteZones = {"TownZone", "Nav"}
+BanditClan.NewOrder.favoriteZones = {"TownZone", "Nav", "TrailerPark"}
 BanditClan.NewOrder.avoidZones = {"Forest", "DeepForest"}
 
 -- hairstyles, nil for default
 BanditClan.NewOrder.hairStyles = {"Bald", "Fresh", "Demi", "FlatTop", "MohawkShort"}
 
 -- available outfits
-BanditClan.NewOrder.Outfits = BanditClan.NewOrder.Outfits or {}
+BanditClan.NewOrder.Outfits = {}
 table.insert(BanditClan.NewOrder.Outfits, "FEDRAHAZMAT")
 table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
 table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
@@ -44,71 +37,62 @@ table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
 table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
 table.insert(BanditClan.NewOrder.Outfits, "FedraSoldier")
 
-
 -- available melee weapons
-BanditClan.NewOrder.Melee = BanditClan.NewOrder.Melee or {}
+BanditClan.NewOrder.Melee = {}
 table.insert(BanditClan.NewOrder.Melee, "Base.HuntingKnife")
 
 -- available primary weapons
-BanditClan.NewOrder.Primary = BanditClan.NewOrder.Primary or BanditWeapons.Primary
+BanditClan.NewOrder.Primary = BanditWeapons.Primary
 
 -- available secondary weapons
-BanditClan.NewOrder.Secondary = BanditClan.NewOrder.Secondary or BanditWeapons.Secondary
+BanditClan.NewOrder.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.NewOrder.Loot = BanditClan.NewOrder.Loot or {}
+BanditClan.NewOrder.Loot = {}
 
+-- equipment
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Necklace_DogTag", 100))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Battery", 88))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 99))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
+table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 60))
+table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Radio.WalkieTalkie5", 10))
+table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Cigarettes", 25))
+table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Matches", 90))
+
+-- medical
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Disinfectant", 99))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Pills", 77))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.SutureNeedle", 35))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.SutureNeedle", 35))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.SutureNeedleHolder", 35))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Tweezers", 11))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Toothbrush", 33))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Toothpaste", 33))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 66))
+table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 10))
 
+-- food
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Gum", 14))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 66))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Coffee2", 33))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Teabag2", 66))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.MugWhite", 22))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 22))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Fork", 77))
 table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Spoon", 77))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.SugarPacket", 66))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.SugarPacket", 66))
-table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.Chocolate", 33))
 
 if getActivatedMods():contains("ExpandedHelicopterEvents") then
     table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 80))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 80))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 70))
     table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 10))
 elseif getActivatedMods():contains("MREM") then
     table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("MREM.MRE", 60))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("MREM.MRE", 60))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("MREM.MRE", 50))
     table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("MREM.MRE", 10))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("MREM.MREBox", 10))
 else
     table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
-    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 70))
     table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 10))
+end
+
+if getActivatedMods():contains("InfectionScanner") then
+    table.insert(BanditClan.NewOrder.Loot, BanditLoot.MakeItem("TLOU.InfectionScanner", 50))
 end
 
 -- register this clan for spawn system

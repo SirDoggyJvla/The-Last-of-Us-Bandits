@@ -12,100 +12,104 @@ BanditClan.DesperateCitizen.name = "Jackson's Community"
 BanditClan.DesperateCitizen.femaleChance = 50
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
-BanditClan.DesperateCitizen.health = 2
+BanditClan.DesperateCitizen.health = 5
 
 -- if the bandit will eat player's body after death
 BanditClan.DesperateCitizen.eatBody = false
 
 -- Ranged weapon accuracy multiplayer (1=default)
-BanditClan.DesperateCitizen.accuracyBoost = 0.8
+BanditClan.DesperateCitizen.accuracyBoost = 1.1
 
--- Favorite zones 
-BanditClan.DesperateCitizen.favoriteZones = {}
-BanditClan.DesperateCitizen.avoidZones = {"Vegitation", "Forest", "DeepForest"}
+-- Favorite zones
+BanditClan.DesperateCitizen.favoriteZones = {"Farm", "FarmLand", "Ranch"}
+BanditClan.DesperateCitizen.avoidZones = {}
 
 -- available outfits
-BanditClan.DesperateCitizen.Outfits = BanditClan.DesperateCitizen.Outfits or {}
-table.insert(BanditClan.DesperateCitizen.Outfits, "Bathrobe")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Generic02")
+BanditClan.DesperateCitizen.Outfits = {}
+table.insert(BanditClan.DesperateCitizen.Outfits, "Camper")
 table.insert(BanditClan.DesperateCitizen.Outfits, "Generic01")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Punk")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Rocker")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Tourist")
-table.insert(BanditClan.DesperateCitizen.Outfits, "BaseballFan_KY")
-table.insert(BanditClan.DesperateCitizen.Outfits, "BaseballFan_Rangers")
-table.insert(BanditClan.DesperateCitizen.Outfits, "BaseballFan_Z")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Bedroom")
--- table.insert(BanditClan.DesperateCitizen.Outfits, "BoxingBlue")
--- table.insert(BanditClan.DesperateCitizen.Outfits, "BoxingRed")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Chef")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Cyclist")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Doctor")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Fireman")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Fossoil")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Gas2Go")
-table.insert(BanditClan.DesperateCitizen.Outfits, "GigaMart_Employee")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Hobbo")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Pharmacist")
-table.insert(BanditClan.DesperateCitizen.Outfits, "ShellSuit_Black")
-table.insert(BanditClan.DesperateCitizen.Outfits, "ShellSuit_Blue")
-table.insert(BanditClan.DesperateCitizen.Outfits, "ShellSuit_Green")
-table.insert(BanditClan.DesperateCitizen.Outfits, "ShellSuit_Pink")
-table.insert(BanditClan.DesperateCitizen.Outfits, "ShellSuit_Teal")
-table.insert(BanditClan.DesperateCitizen.Outfits, "SportsFan")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Varsity")
-
-if getActivatedMods():contains("Authentic Z - Current") then
-    table.insert(BanditClan.DesperateCitizen.Outfits, "AuthenticHomeless")
-    table.insert(BanditClan.DesperateCitizen.Outfits, "AuthenticElderly")
-    table.insert(BanditClan.DesperateCitizen.Outfits, "AuthenticSurvivorCovid")
-end
+table.insert(BanditClan.DesperateCitizen.Outfits, "Generic02")
+table.insert(BanditClan.DesperateCitizen.Outfits, "Generic03")
+table.insert(BanditClan.DesperateCitizen.Outfits, "PrivateMilitia")
+table.insert(BanditClan.DesperateCitizen.Outfits, "Survivalist")
+table.insert(BanditClan.DesperateCitizen.Outfits, "Survivalist03")
 
 -- available melee weapons
-BanditClan.DesperateCitizen.Melee = BanditClan.DesperateCitizen.Melee or {}
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.BreadKnife")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Pan")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.RollingPin")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.SmashedBottle")
+BanditClan.DesperateCitizen.Melee = {}
+table.insert(BanditClan.DesperateCitizen.Melee, "Base.HuntingKnife")
+table.insert(BanditClan.DesperateCitizen.Melee, "Base.Machete")
+table.insert(BanditClan.DesperateCitizen.Melee, "Base.HandAxe")
 table.insert(BanditClan.DesperateCitizen.Melee, "Base.HandScythe")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.WoodenLance")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Banjo")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.ChairLeg")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.GardenFork")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.GridlePan")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Hammer")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.HockeyStick")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.IceHockeyStick")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.MetalPipe")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.PipeWrench")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Plunger")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.GuitarElectricRed")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Saucepan")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.TableLeg")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Wrench")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Plank")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.LeadPipe")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.WoodenMallet")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Broom")
 
 -- available primary weapons
-BanditClan.DesperateCitizen.Primary = BanditClan.DesperateCitizen.Primary or BanditWeapons.Primary
+BanditClan.DesperateCitizen.Primary = BanditWeapons.Primary
 
 -- available secondary weapons
-BanditClan.DesperateCitizen.Secondary = BanditClan.DesperateCitizen.Secondary or BanditWeapons.Secondary
+BanditClan.DesperateCitizen.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.DesperateCitizen.Loot = BanditClan.DesperateCitizen.Loot or {}
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 30))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Gum", 5))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Peppermint", 2))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.GummyWorms", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Jujubes", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HiHis", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CandyFruitSlices", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Crisps", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Crisps2", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Crisps3", 1))
+BanditClan.DesperateCitizen.Loot = {}
+
+-- classic loot
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_DigitalBlack", 50))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Battery", 88))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Battery", 77))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("camping.CampfireKit", 33))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Cigarettes", 10))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Matches", 90))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CampingTentKit", 88))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 80))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 23))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Disinfectant", 55))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Antibiotics", 2))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Pills", 2))
+
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.TinOpener", 50))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Spoon", 40))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Saucepan", 21))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Scissors", 17))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HandAxe", 17))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Soap", 5))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 5))
+
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.TinnedBeans", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCarrots2", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedChili", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCorn", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedFruitCocktail", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedMushroomSoup", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPeaches", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPeas", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPineapple", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPotato2", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedSardines", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.TinnedSoup", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedBolognese", 1))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedTomato2", 1))
+
+if getActivatedMods():contains("ExpandedHelicopterEvents") then
+    table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 70))
+    table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 20))
+elseif getActivatedMods():contains("MREM") then
+    table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("MREM.MRE", 70))
+    table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("MREM.MRE", 20))
+else
+    table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
+    table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 10))
+end
+
+-- lore
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Ring_Left_RingFinger_Gold", 10))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CatToy", 5))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.ToyCar", 5))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Bricktoys", 5))
+table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.ToyBear", 1))
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}

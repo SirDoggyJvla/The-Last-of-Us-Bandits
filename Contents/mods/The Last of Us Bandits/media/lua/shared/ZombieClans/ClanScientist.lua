@@ -9,50 +9,57 @@ BanditClan.Scientist.id = 12
 BanditClan.Scientist.name = "Fireflies"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.Scientist.femaleChance = 60
+BanditClan.Scientist.femaleChance = 50
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
-BanditClan.Scientist.health = 4
+BanditClan.Scientist.health = 6
 
 -- if the bandit will eat player's body after death
 BanditClan.Scientist.eatBody = false
 
 -- Ranged weapon accuracy multiplayer (1=default)
-BanditClan.Scientist.accuracyBoost = 0.8
+BanditClan.Scientist.accuracyBoost = 1.1
 
--- Favorite zones 
-BanditClan.Scientist.favoriteZones = {}
-BanditClan.Scientist.avoidZones = {"Forest", "DeepForest"}
+-- Favorite zones
+BanditClan.Scientist.favoriteZones = {"Forest", "DeepForest"}
+BanditClan.Scientist.avoidZones = {}
 
 -- available outfits
-BanditClan.Scientist.Outfits = BanditClan.Scientist.Outfits or {}
-table.insert(BanditClan.Scientist.Outfits, "HazardSuit")
-
-if getActivatedMods():contains("Authentic Z - Current") then
-    table.insert(BanditClan.Scientist.Outfits, "AuthenticHazardSuit")
-    table.insert(BanditClan.Scientist.Outfits, "AuthenticCEDAHazmatBlue")
-    table.insert(BanditClan.Scientist.Outfits, "AuthenticCEDAHazmatGreen")
-    table.insert(BanditClan.Scientist.Outfits, "AuthenticNBHHazmat")
-    table.insert(BanditClan.Scientist.Outfits, "AuthenticSurvivorHazardSuit")
-end
+BanditClan.Scientist.Outfits = {}
+table.insert(BanditClan.Scientist.Outfits, "PrivateMilitia")
+table.insert(BanditClan.Scientist.Outfits, "Bandit")
+table.insert(BanditClan.Scientist.Outfits, "Survivalist")
+table.insert(BanditClan.Scientist.Outfits, "Survivalist02")
+table.insert(BanditClan.Scientist.Outfits, "Survivalist03")
+table.insert(BanditClan.Scientist.Outfits, "Camper")
 
 -- available melee weapons
-BanditClan.Scientist.Melee = BanditClan.Scientist.Melee or {}
-table.insert(BanditClan.Scientist.Melee, "Base.Scalpel")
+BanditClan.Scientist.Melee = {}
+table.insert(BanditClan.Scientist.Melee, "Base.HuntingKnife")
+table.insert(BanditClan.Scientist.Melee, "Base.Machete")
+table.insert(BanditClan.Scientist.Melee, "Base.HandAxe")
+table.insert(BanditClan.Scientist.Melee, "Base.HandScythe")
 
 -- available primary weapons
-BanditClan.Scientist.Primary = BanditClan.Scientist.Primary or BanditWeapons.Primary
+BanditClan.Scientist.Primary = BanditWeapons.Primary
 
 -- available secondary weapons
-BanditClan.Scientist.Secondary = BanditClan.Scientist.Secondary or BanditWeapons.Secondary
+BanditClan.Scientist.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.Scientist.Loot = BanditClan.Scientist.Loot or {}
+BanditClan.Scientist.Loot = {}
 
+-- equipment
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Necklace_DogTag", 100))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 66))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Battery", 88))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 60))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Radio.WalkieTalkie5", 10))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Cigarettes", 10))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Matches", 90))
+
+-- medical
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Disinfectant", 99))
@@ -61,36 +68,26 @@ table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.SutureNeedle", 35))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.SutureNeedleHolder", 35))
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Tweezers", 11))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Toothbrush", 33))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Toothpaste", 33))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.CottonBalls", 33))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Soap", 22))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.CleaningLiquid", 22))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Bleach", 22))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 10))
+
+-- food
 table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.MugWhite", 22))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 22))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Fork", 77))
+table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Spoon", 77))
 
 if getActivatedMods():contains("ExpandedHelicopterEvents") then
     table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 80))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 70))
     table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 10))
-end
-
-if getActivatedMods():contains("VaccinDrReapersMP") or getActivatedMods():contains("VaccinDrReapers") then
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.LabTestResultNegative", 100))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.ChAmmonia", 15))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.ChSulfuricAcidCan", 15))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.ChHydrochloricAcidCan", 15))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.ChSodiumHydroxideBag", 15))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.LabSyringe", 99))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.LabSyringeUsed", 99))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeWithPlainVaccine", 4))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeReusableWithPlainVaccine", 4))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeWithQualityVaccine", 3))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeReusableWithQualityVaccine", 3))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeWithAdvancedVaccine", 2))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeReusableWithAdvancedVaccine", 2))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeWithCure", 1))
-    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("LabItems.CmpSyringeReusableWithCure", 1))
+elseif getActivatedMods():contains("MREM") then
+    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("MREM.MRE", 60))
+    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("MREM.MRE", 10))
+else
+    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
+    table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 10))
 end
 
 -- register this clan for spawn system

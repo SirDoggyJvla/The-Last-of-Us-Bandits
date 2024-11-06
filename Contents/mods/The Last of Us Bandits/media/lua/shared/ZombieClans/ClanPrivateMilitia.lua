@@ -18,38 +18,34 @@ BanditClan.PrivateMilitia.health = 6
 BanditClan.PrivateMilitia.eatBody = false
 
 -- Ranged weapon accuracy multiplayer (1=default)
-BanditClan.PrivateMilitia.accuracyBoost = 1.1
+BanditClan.PrivateMilitia.accuracyBoost = 1.3
 
 -- Favorite zones 
 BanditClan.PrivateMilitia.favoriteZones = {"TownZone", "Nav"}
 BanditClan.PrivateMilitia.avoidZones = {"Forest", "DeepForest"}
 
 -- available outfits
-BanditClan.PrivateMilitia.Outfits = BanditClan.PrivateMilitia.Outfits or {}
-if getActivatedMods():contains("USMilitaryPack") then
-    table.insert(BanditClan.PrivateMilitia.Outfits, "INFANTRY_USMP1")
-    table.insert(BanditClan.PrivateMilitia.Outfits, "INFANTRY_USMP2")
-elseif getActivatedMods():contains("Brita_2") then
-    table.insert(BanditClan.PrivateMilitia.Outfits, "Brita_Gorka")
-    table.insert(BanditClan.PrivateMilitia.Outfits, "Brita_Hunter_2")
-else
-    table.insert(BanditClan.PrivateMilitia.Outfits, "PrivateMilitia")
-    table.insert(BanditClan.PrivateMilitia.Outfits, "Camper")
-end
+BanditClan.PrivateMilitia.Outfits = {}
+
+table.insert(BanditClan.PrivateMilitia.Outfits, "PrivateMilitia")
+table.insert(BanditClan.PrivateMilitia.Outfits, "Survivalist03")
+table.insert(BanditClan.PrivateMilitia.Outfits, "Camper")
 
 -- available melee weapons
-BanditClan.PrivateMilitia.Melee = BanditClan.PrivateMilitia.Melee or {}
-table.insert(BanditClan.PrivateMilitia.Melee, "Base.Machete")
+BanditClan.PrivateMilitia.Melee = {}
 table.insert(BanditClan.PrivateMilitia.Melee, "Base.HuntingKnife")
+table.insert(BanditClan.PrivateMilitia.Melee, "Base.Machete")
+table.insert(BanditClan.PrivateMilitia.Melee, "Base.HandAxe")
+table.insert(BanditClan.PrivateMilitia.Melee, "Base.HandScythe")
 
 -- available primary weapons
-BanditClan.PrivateMilitia.Primary = BanditClan.PrivateMilitia.Primary or BanditWeapons.Primary
+BanditClan.PrivateMilitia.Primary = BanditWeapons.Primary
 
 -- available secondary weapons
-BanditClan.PrivateMilitia.Secondary = BanditClan.PrivateMilitia.Secondary or BanditWeapons.Secondary
+BanditClan.PrivateMilitia.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.PrivateMilitia.Loot = BanditClan.PrivateMilitia.Loot or {}
+BanditClan.PrivateMilitia.Loot = {}
 
 -- equipment
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Necklace_DogTag", 100))
@@ -58,6 +54,8 @@ table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Battery",
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Battery", 88))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 60))
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Radio.WalkieTalkie5", 10))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Cigarettes", 25))
+table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Matches", 90))
 
 -- medical
 table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))

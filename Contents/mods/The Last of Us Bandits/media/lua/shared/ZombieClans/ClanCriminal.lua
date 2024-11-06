@@ -12,55 +12,64 @@ BanditClan.Criminal.name = "Rattlers"
 BanditClan.Criminal.femaleChance = 15
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
-BanditClan.Criminal.health = 3
+BanditClan.Criminal.health = 5
 
 -- if the bandit will eat player's body after death
 BanditClan.Criminal.eatBody = false
 
 -- Ranged weapon accuracy multiplayer (1=default)
-BanditClan.Criminal.accuracyBoost = 0.9
+BanditClan.Criminal.accuracyBoost = 1
 
--- Favorite zones 
-BanditClan.Criminal.favoriteZones = {"TownZone"}
-BanditClan.Criminal.avoidZones = {"Vegitation", "Forest", "DeepForest"}
+-- Favorite zones
+BanditClan.Criminal.favoriteZones = {"Vegitation", "Farm", "FarmLand", "Ranch"}
+BanditClan.Criminal.avoidZones = {"TownZone", "Nav"}
 
 -- available outfits
-BanditClan.Criminal.Outfits = BanditClan.Criminal.Outfits or {}
-table.insert(BanditClan.Criminal.Outfits, "Thug")
+BanditClan.Criminal.Outfits = {}
+table.insert(BanditClan.Criminal.Outfits, "Survivalist")
+table.insert(BanditClan.Criminal.Outfits, "Survivalist02")
+table.insert(BanditClan.Criminal.Outfits, "Survivalist03")
+table.insert(BanditClan.Criminal.Outfits, "Camper")
+table.insert(BanditClan.Criminal.Outfits, "PrivateMilitia")
 table.insert(BanditClan.Criminal.Outfits, "Redneck")
-table.insert(BanditClan.Criminal.Outfits, "Young")
+table.insert(BanditClan.Criminal.Outfits, "Rocker")
 
 -- available melee weapons
-BanditClan.Criminal.Melee = BanditClan.Criminal.Melee or {}
+BanditClan.Criminal.Melee = {}
 table.insert(BanditClan.Criminal.Melee, "Base.Crowbar")
 table.insert(BanditClan.Criminal.Melee, "Base.MetalBar")
 table.insert(BanditClan.Criminal.Melee, "Base.BaseballBat")
 table.insert(BanditClan.Criminal.Melee, "Base.KitchenKnife")
 
 -- available primary weapons
-BanditClan.Criminal.Primary = BanditClan.Criminal.Primary or BanditWeapons.Primary
+BanditClan.Criminal.Primary = BanditWeapons.Primary
 
 -- available secondary weapons
-BanditClan.Criminal.Secondary = BanditClan.Criminal.Secondary or BanditWeapons.Secondary
+BanditClan.Criminal.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.Criminal.Loot = BanditClan.Criminal.Loot or {}
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 30))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Crowbar", 77))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Hammer", 33))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Saw", 3))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WeldingMask", 4))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.BlowTorch", 4))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Jack", 5)) 
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.LugWrench", 5))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Wrench", 6))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Screwdriver", 6))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.IcePick", 13))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.TinOpener", 11))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Wrench", 6))
-table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Screwdriver", 6))
+BanditClan.Criminal.Loot = {}
 
+-- classic loot
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_DigitalBlack", 50))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Battery", 88))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Battery", 77))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Matches", 90))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 80))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 23))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Disinfectant", 55))
+
+-- drugs
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Cigarettes", 40))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Antibiotics", 10))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Pills", 10))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WhiskeyFull", 22))
+
+-- stolen food
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.TinnedBeans", 2))
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedCarrots2", 2))
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedChili", 2))
@@ -84,27 +93,10 @@ table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedTomato", 
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedEggplant", 1))
 table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.CannedBellPepper", 1))
 
-for i=1, 4  do
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Right_MiddleFinger_GoldDiamond", 77))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Left_MiddleFinger_GoldDiamond", 66))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Right_RingFinger_GoldDiamond", 77))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Left_RingFinger_GoldDiamond", 72))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Right_MiddleFinger_Gold", 91))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Left_MiddleFinger_Gold", 55))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Right_RingFinger_Gold", 65))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Ring_Left_RingFinger_Gold", 73))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Necklace_Gold", 69))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Necklace_GoldRuby", 87))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Necklace_GoldDiamond", 65))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.NecklaceLong_GoldDiamond", 47))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Bracelet_ChainRightGold", 66))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Bracelet_ChainLeftGold", 55))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Bracelet_BangleRightGold", 37))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Bracelet_BangleLeftGold", 39))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_ClassicGold", 99))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_ClassicGold", 88))
-    table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_ClassicGold", 77))
-end
+-- slavery
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.Rope", 66))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.DuctTape", 65))
+table.insert(BanditClan.Criminal.Loot, BanditLoot.MakeItem("Base.TrapSnare", 65))
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}

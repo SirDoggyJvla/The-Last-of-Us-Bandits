@@ -12,7 +12,7 @@ BanditClan.Hunter.name = "Hunters"
 BanditClan.Hunter.femaleChance = 15
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
-BanditClan.Hunter.health = 2
+BanditClan.Hunter.health = 3
 
 -- if the bandit will eat player's body after death
 BanditClan.Hunter.eatBody = false
@@ -25,91 +25,90 @@ BanditClan.Hunter.favoriteZones = {"TownZone", "Nav"}
 BanditClan.Hunter.avoidZones = {}
 
 -- available outfits
-BanditClan.Hunter.Outfits = BanditClan.Hunter.Outfits or {}
-table.insert(BanditClan.Hunter.Outfits, "Hunter")
+BanditClan.Hunter.Outfits = {}
+table.insert(BanditClan.Hunter.Outfits, "Bandit")
+table.insert(BanditClan.Hunter.Outfits, "Survivalist")
+table.insert(BanditClan.Hunter.Outfits, "Survivalist02")
+table.insert(BanditClan.Hunter.Outfits, "Survivalist03")
+table.insert(BanditClan.Hunter.Outfits, "PrivateMilitia")
 
 -- available melee weapons
-BanditClan.Hunter.Melee = BanditClan.Hunter.Melee or {}
+BanditClan.Hunter.Melee = {}
 table.insert(BanditClan.Hunter.Melee, "Base.KitchenKnife")
 table.insert(BanditClan.Hunter.Melee, "Base.HuntingKnife")
 table.insert(BanditClan.Hunter.Melee, "Base.Machete")
 table.insert(BanditClan.Hunter.Melee, "Base.HandAxe")
+table.insert(BanditClan.Hunter.Melee, "Base.HandScythe")
+table.insert(BanditClan.Hunter.Melee, "Base.MetalPipe")
+table.insert(BanditClan.Hunter.Melee, "Base.Hammer")
+table.insert(BanditClan.Hunter.Melee, "Base.PipeWrench")
+table.insert(BanditClan.Hunter.Melee, "Base.Wrench")
+table.insert(BanditClan.Hunter.Melee, "Base.PickAxe")
+table.insert(BanditClan.Hunter.Melee, "Base.MetalBar")
+table.insert(BanditClan.Hunter.Melee, "Base.LeadPipe")
+table.insert(BanditClan.Hunter.Melee, "Base.MeatCleaver")
+table.insert(BanditClan.Hunter.Melee, "Base.Crowbar")
+table.insert(BanditClan.Hunter.Melee, "Base.Shovel")
+table.insert(BanditClan.Hunter.Melee, "Base.Shovel2")
+table.insert(BanditClan.Hunter.Melee, "Base.SmashedBottle")
+table.insert(BanditClan.Hunter.Melee, "Base.Axe")
+table.insert(BanditClan.Hunter.Melee, "Base.SpearHuntingKnife")
+table.insert(BanditClan.Hunter.Melee, "Base.SpearCrafted")
+table.insert(BanditClan.Hunter.Melee, "Base.SpearScissors")
+table.insert(BanditClan.Hunter.Melee, "Base.Scissors")
+table.insert(BanditClan.Hunter.Melee, "Base.SpearMachete")
+table.insert(BanditClan.Hunter.Melee, "Base.PlankNail")
+table.insert(BanditClan.Hunter.Melee, "Base.BaseballBat")
+table.insert(BanditClan.Hunter.Melee, "Base.BaseballBatNails")
 
 -- available primary weapons
-BanditClan.Hunter.Primary = BanditClan.Hunter.Primary or BanditWeapons.Primary
+BanditClan.Hunter.Primary = BanditWeapons.Primary
 
 -- available secondary weapons
-BanditClan.Hunter.Secondary = BanditClan.Hunter.Secondary or BanditWeapons.Secondary
+BanditClan.Hunter.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.Hunter.Loot = BanditClan.Hunter.Loot or {}
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_DigitalBlack", 100))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.FishingRod", 87))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Worm", 90))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Worm", 80))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Worm", 70))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("camping.CampfireKit", 33))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Matches", 99))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CampingTentKit", 88))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 80))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Twine", 80))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 23))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Disinfectant", 55))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Pills", 2))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Spoon", 40))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Pot", 21))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Scissors", 17))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Toothbrush", 77))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Toothpaste", 77))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Soap", 66))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.TrapStick", 52))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.TrapSnare", 62))
+BanditClan.Hunter.Loot = {}
+-- classic loot
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 10))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.WaterBottleEmpty", 90))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Cigarettes", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Matches", 2))
 
-if getActivatedMods():contains("MandelaBowAndArrow") then
-    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("MandelaBowAndArrow.MandelaBowWoodLong", 100))
-    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("MandelaBowAndArrow.MandelaArrowBundle", 12))
-    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("MandelaArrowWoodDucttapeIron", 77))
-    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("MandelaArrowWoodDucttapeIron", 66))
-    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("MandelaArrowWoodDucttapeIron", 55))
-    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("MandelaArrowWoodDucttapeIron", 44))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.TinOpener", 2))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Spoon", 10))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Pencil", 10))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Saucepan", 2))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Scissors", 5))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HandAxe", 1))
+
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.TinnedBeans", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedCarrots2", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedChili", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedCorn", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedFruitCocktail", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedMushroomSoup", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedPeaches", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedPeas", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedPineapple", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedPotato2", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedSardines", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.TinnedSoup", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedBolognese", 1))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CannedTomato2", 1))
+
+-- lore
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Ring_Left_RingFinger_Gold", 10))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.CatToy", 5))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.ToyCar", 5))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Bricktoys", 5))
+table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.ToyBear", 1))
+
+-- other
+for _ = 1,3 do
+    table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.RippedSheetsDirty", 80))
 end
-
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.WhiskeyFull", 22))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 34))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Sausage", 34))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Baloney", 31))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Salami", 23))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DeadRabbit", 77))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DeadRabbit", 44))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DeadRabbit", 4))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DeadSquirrel", 66))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DeadSquirrel", 55))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.DeadSquirrel", 22))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Trout", 11))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Trout", 11))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Trout", 11))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Perch", 11))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Perch", 11))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Crappie", 11))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Crappie", 11))
-
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Chocolate", 1))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.PeanutButter", 1))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Apple", 1))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Cherry", 1))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Grapes", 8))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Onion", 5))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.Frog", 19))
-
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HuntingMag1", 5))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HuntingMag2", 5))
-table.insert(BanditClan.Hunter.Loot, BanditLoot.MakeItem("Base.HuntingMag3", 5))
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}
