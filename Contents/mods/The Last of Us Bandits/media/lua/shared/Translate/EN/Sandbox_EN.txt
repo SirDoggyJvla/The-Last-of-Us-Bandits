@@ -1,15 +1,15 @@
 Sandbox_EN = {
 /*
 Faction replacements
-    FEDRA                   =       New Hope Order
-    Seraphites              =       Holy Reclaimers
-    WLF                     =       Private Militia
-    Hunters                 =       Hunters
-    Preppers (such as Bill) =       Preppers
-    Rattlers                =       Criminals
-    Fireflies               =       Government Scientists
-    Cannibals               =       Cannibals
-    Jackson's Community     =       Desperate Citizens
+    FEDRA                       =       New Hope Order
+    Seraphites                  =       Holy Reclaimers
+    WLF                         =       Private Militia
+    Hunters                     =       Hunters
+    Preppers (such as Bill)     =       Preppers
+    Rattlers                    =       Criminals
+    Fireflies                   =       Government Scientists
+    Cannibals (David's group)   =       Cannibals
+    Jackson's Community         =       Desperate Citizens
 */
 
     Sandbox_Bandits.GroupName_option1       = "The Last of Us: Jackson's Community",
