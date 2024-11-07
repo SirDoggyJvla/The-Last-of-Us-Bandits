@@ -7,7 +7,7 @@ In The Last of Us apocalypse, the infected are not the only threats. This mod is
 [h1]Installation guide:[/h1]
 Load this mod [b]AFTER[/b] Bandits so it can properly replace the clans.
 
-Each factions are not set with TLOU lore accurate settings by default in the sandbox options. It's a limitation from Project Zomboid as I can't change the default options by modifying Bandits sandbox options. You'll have to set them up manually.
+Each factions [b]ARE NOT SET[/b] with TLOU lore accurate settings by default in the sandbox options. It's a limitation from Project Zomboid as I can't change the default options of Bandits sandbox options. You'll have to set them up manually.
 
 For balancing, refer to the lore description of groups and the suggested settings for each below. Their chance of spawning, you should be the ones to customize those. Some groups are very strong, so setting those as potential friendlies will make your life way too easy and if you set them as only hostile, make sure to tweak their spawning rate or to make them start spawning after a few in-game days.
 
@@ -119,13 +119,16 @@ Extremely dangerous group. Decent loot.
 
 [table]
 [tr]
+[td] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3302729836] [img]https://steamuserimages-a.akamaihd.net/ugc/2483257116309986571/A31945257F7BC26F774A6AF78AA45D28B6C61F11/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false[/img] [/url] [/td]
+[td]With [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3302729836]The Last of Guns Remastered[/url], Bandits will be able to use the guns from The Last of Us. [/td]
+[/tr]
+[tr]
 [td] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3332296598] [img]https://steamuserimages-a.akamaihd.net/ugc/2414581210988532828/381EE3517232E165DF3C17A7797590C467F663ED/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false[/img] [/url] [/td]
 [td]Native compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3332296598]Infection Scanner[/url] ! FEDRA soldiers will have a chance to drop an infection scanner. [/td]
 [/tr]
 [/table]
 
 [hr][/hr]
-
 
 [url=https://discord.gg/SReMnbV4V7][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/PZmodCommBanner1.png[/img][/url]
 
