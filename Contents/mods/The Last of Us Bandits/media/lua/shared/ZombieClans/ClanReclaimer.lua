@@ -1,6 +1,6 @@
 BanditClan = BanditClan or {}
 
-BanditClan.Reclaimer = BanditClan.Reclaimer or {}
+BanditClan.Reclaimer = {}
 
 -- The unique id of the clan, ids 1-16 are reserved for waves
 BanditClan.Reclaimer.id = 11
@@ -28,19 +28,21 @@ BanditClan.Reclaimer.avoidZones = {}
 BanditClan.NewOrder.hairStyles = {"Bald"}
 
 -- available outfits
-BanditClan.Reclaimer.Outfits = {}
-table.insert(BanditClan.Reclaimer.Outfits, "Seraphites")
-table.insert(BanditClan.Reclaimer.Outfits, "Seraphites2")
+BanditClan.Reclaimer.Outfits = {
+    "Seraphites",
+    "Seraphites2",
+}
 
 -- available melee weapons
-BanditClan.Reclaimer.Melee = {}
-table.insert(BanditClan.Reclaimer.Melee, "TLOU.SCARScythe")
-table.insert(BanditClan.Reclaimer.Melee, "Base.HandScythe")
-table.insert(BanditClan.Reclaimer.Melee, "Base.FlintKnife")
-table.insert(BanditClan.Reclaimer.Melee, "Base.Machete")
-table.insert(BanditClan.Reclaimer.Melee, "Base.SpearCrafted")
-table.insert(BanditClan.Reclaimer.Melee, "Base.SpearScissors")
-table.insert(BanditClan.Reclaimer.Melee, "Base.SpearMachete")
+BanditClan.Reclaimer.Melee = {
+    "TLOU.SCARScythe",
+    "Base.HandScythe",
+    "Base.FlintKnife",
+    "Base.Machete",
+    "Base.SpearCrafted",
+    "Base.SpearScissors",
+    "Base.SpearMachete",
+}
 
 -- available primary weapons
 BanditClan.Reclaimer.Primary = BanditWeapons.Primary
@@ -48,72 +50,71 @@ BanditClan.Reclaimer.Primary = BanditWeapons.Primary
 -- available secondary weapons
 BanditClan.Reclaimer.Secondary = BanditWeapons.Secondary
 
--- loot table
-BanditClan.Reclaimer.Loot = {}
-
--- equipment
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Saw", 10))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.LeatherWaterBottleFull", 40))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.LeatherWaterBottleEmpty", 5))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.LeatherWaterBottle2Full", 40))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.LeatherWaterBottle2Empty", 5))
-
-
 local high = 60
 local medium = 30
 local low = 10
 local veryLow = 5
--- foraging
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric1", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric2", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric3", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric4", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric5", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric6", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.MushroomGeneric7", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Carrots", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Eggplant", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Leek", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryBlack", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryBlue", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryGeneric1", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryGeneric2", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryGeneric3", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryGeneric4", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BerryGeneric5", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Egg", low))
+-- loot table
+BanditClan.Reclaimer.Loot = {
+    -- equipment
+    {name = "Base.Saw", chance = 10},
+    {name = "Base.LeatherWaterBottleFull", chance = 40},
+    {name = "Base.LeatherWaterBottleEmpty", chance = 5},
+    {name = "Base.LeatherWaterBottle2Full", chance = 40},
+    {name = "Base.LeatherWaterBottle2Empty", chance = 5},
 
--- bugs
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Centipede", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Cockroach", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Cricket", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Maggots", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Millipede", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Pillbug", low))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Worm", low))
+    -- foraging
+    {name = "Base.MushroomGeneric1", chance = low},
+    {name = "Base.MushroomGeneric2", chance = low},
+    {name = "Base.MushroomGeneric3", chance = low},
+    {name = "Base.MushroomGeneric4", chance = low},
+    {name = "Base.MushroomGeneric5", chance = low},
+    {name = "Base.MushroomGeneric6", chance = low},
+    {name = "Base.MushroomGeneric7", chance = low},
+    {name = "Base.Carrots", chance = low},
+    {name = "Base.Eggplant", chance = low},
+    {name = "Base.Leek", chance = low},
+    {name = "Base.BerryBlack", chance = low},
+    {name = "Base.BerryBlue", chance = low},
+    {name = "Base.BerryGeneric1", chance = low},
+    {name = "Base.BerryGeneric2", chance = low},
+    {name = "Base.BerryGeneric3", chance = low},
+    {name = "Base.BerryGeneric4", chance = low},
+    {name = "Base.BerryGeneric5", chance = low},
+    {name = "Base.Egg", chance = low},
 
--- hunting
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.DeadRabbit", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.DeadRat", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.DeadMouse", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.DeadSquirrel", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.DeadBird", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.DeadMouse", veryLow))
+    -- bugs
+    {name = "Base.Centipede", chance = low},
+    {name = "Base.Cockroach", chance = low},
+    {name = "Base.Cricket", chance = low},
+    {name = "Base.Maggots", chance = low},
+    {name = "Base.Millipede", chance = low},
+    {name = "Base.Pillbug", chance = low},
+    {name = "Base.Worm", chance = low},
 
--- butchering
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Lard", veryLow))
+    -- hunting
+    {name = "Base.DeadRabbit", chance = veryLow},
+    {name = "Base.DeadRat", chance = veryLow},
+    {name = "Base.DeadMouse", chance = veryLow},
+    {name = "Base.DeadSquirrel", chance = veryLow},
+    {name = "Base.DeadBird", chance = veryLow},
+    {name = "Base.DeadMouse", chance = veryLow},
 
--- fishing
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Catfish", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Bass", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Perch", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Crappie", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Panfish", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Pike", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.Trout", veryLow))
-table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.BaitFish", veryLow))
+    -- butchering
+    {name = "Base.Lard", chance = veryLow},
 
--- other
+    -- fishing
+    {name = "Base.Catfish", chance = veryLow},
+    {name = "Base.Bass", chance = veryLow},
+    {name = "Base.Perch", chance = veryLow},
+    {name = "Base.Crappie", chance = veryLow},
+    {name = "Base.Panfish", chance = veryLow},
+    {name = "Base.Pike", chance = veryLow},
+    {name = "Base.Trout", chance = veryLow},
+    {name = "Base.BaitFish", chance = veryLow},
+}
+
+-- multiple
 for _ = 1,3 do
     table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.LeatherStripsDirty", high))
     table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.RippedSheetsDirty", high))
@@ -122,7 +123,6 @@ for _ = 1,3 do
     table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.SharpedStone", medium))
     table.insert(BanditClan.Reclaimer.Loot, BanditLoot.MakeItem("Base.TreeBranch", low))
 end
-
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}

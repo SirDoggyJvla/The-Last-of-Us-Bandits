@@ -1,6 +1,6 @@
 BanditClan = BanditClan or {}
 
-BanditClan.Scientist = BanditClan.Scientist or {}
+BanditClan.Scientist = {}
 
 -- The unique id of the clan, ids 1-16 are reserved for waves
 BanditClan.Scientist.id = 12
@@ -25,20 +25,22 @@ BanditClan.Scientist.favoriteZones = {"Forest", "DeepForest"}
 BanditClan.Scientist.avoidZones = {}
 
 -- available outfits
-BanditClan.Scientist.Outfits = {}
-table.insert(BanditClan.Scientist.Outfits, "PrivateMilitia")
-table.insert(BanditClan.Scientist.Outfits, "Bandit")
-table.insert(BanditClan.Scientist.Outfits, "Survivalist")
-table.insert(BanditClan.Scientist.Outfits, "Survivalist02")
-table.insert(BanditClan.Scientist.Outfits, "Survivalist03")
-table.insert(BanditClan.Scientist.Outfits, "Camper")
+BanditClan.Scientist.Outfits = {
+    "PrivateMilitia",
+    "Bandit",
+    "Survivalist",
+    "Survivalist02",
+    "Survivalist03",
+    "Camper",
+}
 
 -- available melee weapons
-BanditClan.Scientist.Melee = {}
-table.insert(BanditClan.Scientist.Melee, "Base.HuntingKnife")
-table.insert(BanditClan.Scientist.Melee, "Base.Machete")
-table.insert(BanditClan.Scientist.Melee, "Base.HandAxe")
-table.insert(BanditClan.Scientist.Melee, "Base.HandScythe")
+BanditClan.Scientist.Melee = {
+    "Base.HuntingKnife",
+    "Base.Machete",
+    "Base.HandAxe",
+    "Base.HandScythe",
+}
 
 -- available primary weapons
 BanditClan.Scientist.Primary = BanditWeapons.Primary
@@ -47,37 +49,37 @@ BanditClan.Scientist.Primary = BanditWeapons.Primary
 BanditClan.Scientist.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.Scientist.Loot = {}
+BanditClan.Scientist.Loot = {
+    -- equipment
+    {chance = 100, name = "Base.Necklace_DogTag"},
+    {chance = 100, name = "Base.HandTorch"},
+    {chance = 88, name = "Base.Battery"},
+    {chance = 88, name = "Base.Battery"},
+    {chance = 60, name = "Base.WalkieTalkieMakeShift"},
+    {chance = 10, name = "Base.WalkieTalkie5"},
+    {chance = 10, name = "Base.Cigarettes"},
+    {chance = 90, name = "Base.Matches"},
 
--- equipment
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Necklace_DogTag", 100))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 60))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Radio.WalkieTalkie5", 10))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Cigarettes", 10))
-table.insert(BanditClan.PrivateMilitia.Loot, BanditLoot.MakeItem("Base.Matches", 90))
+    -- medical
+    {chance = 33, name = "Base.AlcoholBandage"},
+    {chance = 33, name = "Base.AlcoholBandage"},
+    {chance = 99, name = "Base.Disinfectant"},
+    {chance = 77, name = "Base.Pills"},
+    {chance = 35, name = "Base.Pencil"},
+    {chance = 35, name = "Base.SutureNeedle"},
+    {chance = 35, name = "Base.SutureNeedleHolder"},
+    {chance = 11, name = "Base.Tweezers"},
+    {chance = 10, name = "Base.ToiletPaper"},
 
--- medical
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Disinfectant", 99))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Pills", 77))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.SutureNeedle", 35))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.SutureNeedleHolder", 35))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Tweezers", 11))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 10))
-
--- food
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 44))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.MugWhite", 22))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 22))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Fork", 77))
-table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.Spoon", 77))
+    -- food
+    {chance = 99, name = "Base.WaterBottleFull"},
+    {chance = 44, name = "Base.DehydratedMeatStick"},
+    {chance = 44, name = "Base.DehydratedMeatStick"},
+    {chance = 22, name = "Base.MugWhite"},
+    {chance = 22, name = "Base.HuntingKnife"},
+    {chance = 77, name = "Base.Fork"},
+    {chance = 77, name = "Base.Spoon"},
+}
 
 if getActivatedMods():contains("ExpandedHelicopterEvents") then
     table.insert(BanditClan.Scientist.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 80))

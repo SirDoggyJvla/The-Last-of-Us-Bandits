@@ -12,7 +12,7 @@ Faction replacements
     Jackson's Community         =       Desperate Citizens
 */
 
-    Sandbox_Bandits.GroupName_option1       = "The Last of Us: Jackson's Community",
+    Sandbox_Bandits.GroupName_option1       = "The Last of Us: Jackson Community",
     Sandbox_Bandits.GroupName_option3       = "The Last of Us: Cannibals",
     Sandbox_Bandits.GroupName_option4       = "The Last of Us: Rattlers",
     Sandbox_Bandits.GroupName_option7       = "The Last of Us: Preppers",

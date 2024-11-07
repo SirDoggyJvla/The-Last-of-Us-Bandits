@@ -1,6 +1,6 @@
 BanditClan = BanditClan or {}
 
-BanditClan.Prepper = BanditClan.Prepper or {}
+BanditClan.Prepper = {}
 
 -- The unique id of the clan, ids 1-16 are reserved for waves
 BanditClan.Prepper.id = 7
@@ -9,7 +9,7 @@ BanditClan.Prepper.id = 7
 BanditClan.Prepper.name = "Prepper"
 
 -- % chance of a clan member to be a female. Outfit must support it.
-BanditClan.Prepper.femaleChance = 0
+BanditClan.Prepper.femaleChance = 15
 
 -- health ranges from 1 - 14. Higher values may produce unexpected results,
 BanditClan.Prepper.health = 8
@@ -18,29 +18,31 @@ BanditClan.Prepper.health = 8
 BanditClan.Prepper.eatBody = false
 
 -- Ranged weapon accuracy multiplayer (1=default)
-BanditClan.Prepper.accuracyBoost = 1.4
+BanditClan.Prepper.accuracyBoost = 1.5
 
 -- Favorite zones 
 BanditClan.Prepper.favoriteZones = {"Vegitation", "Farm", "FarmLand", "Ranch"}
 BanditClan.Prepper.avoidZones = {"TownZone", "Nav"}
 
 -- available outfits
-BanditClan.Prepper.Outfits = {}
-table.insert(BanditClan.Prepper.Outfits, "Survivalist")
-table.insert(BanditClan.Prepper.Outfits, "Survivalist02")
-table.insert(BanditClan.Prepper.Outfits, "Survivalist03")
-table.insert(BanditClan.Prepper.Outfits, "Camper")
-table.insert(BanditClan.Prepper.Outfits, "PrivateMilitia")
+BanditClan.Prepper.Outfits = {
+    "Survivalist",
+    "Survivalist02",
+    "Survivalist03",
+    "Camper",
+    "PrivateMilitia",
+}
 
 -- available melee weapons
-BanditClan.Prepper.Melee = {}
-table.insert(BanditClan.Prepper.Melee, "Base.SpearHuntingKnife")
-table.insert(BanditClan.Prepper.Melee, "Base.WoodenLance")
-table.insert(BanditClan.Prepper.Melee, "Base.HuntingKnife")
-table.insert(BanditClan.Prepper.Melee, "Base.Machete")
-table.insert(BanditClan.Prepper.Melee, "Base.Axe")
-table.insert(BanditClan.Prepper.Melee, "Base.HandAxe")
-table.insert(BanditClan.Prepper.Melee, "Base.HandScythe")
+BanditClan.Prepper.Melee = {
+    "Base.SpearHuntingKnife",
+    "Base.WoodenLance",
+    "Base.HuntingKnife",
+    "Base.Machete",
+    "Base.Axe",
+    "Base.HandAxe",
+    "Base.HandScythe",
+}
 
 -- available primary weapons
 BanditClan.Prepper.Primary = BanditWeapons.Primary
@@ -49,39 +51,115 @@ BanditClan.Prepper.Primary = BanditWeapons.Primary
 BanditClan.Prepper.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.Prepper.Loot = {}
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_DigitalBlack", 100))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Battery", 77))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("camping.CampfireKit", 33))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Matches", 99))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CampingTentKit", 88))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 80))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 23))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Disinfectant", 55))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Antibiotics", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Pills", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TinOpener", 50))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Spoon", 40))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Saucepan", 21))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Scissors", 17))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.HandAxe", 17))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.HandShovel", 7))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Soap", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 5))
+BanditClan.Prepper.Loot = {
+    {name = "Base.WristWatch_Left_DigitalBlack", chance = 100},
+    {name = "Base.HandTorch", chance = 100},
+    {name = "Base.Battery", chance = 88},
+    {name = "Base.Battery", chance = 77},
+    {name = "camping.CampfireKit", chance = 33},
+    {name = "Base.Matches", chance = 99},
+    {name = "Base.CampingTentKit", chance = 88},
+    {name = "Base.HuntingKnife", chance = 80},
+    {name = "Radio.WalkieTalkieMakeShift", chance = 23},
+    {name = "Base.AlcoholBandage", chance = 33},
+    {name = "Base.AlcoholBandage", chance = 33},
+    {name = "Base.Disinfectant", chance = 55},
+    {name = "Base.Antibiotics", chance = 2},
+    {name = "Base.Pills", chance = 2},
+    {name = "Base.TinOpener", chance = 50},
+    {name = "Base.Spoon", chance = 40},
+    {name = "Base.Pencil", chance = 35},
+    {name = "Base.Saucepan", chance = 21},
+    {name = "Base.Scissors", chance = 17},
+    {name = "Base.HandAxe", chance = 17},
+    {name = "farming.HandShovel", chance = 7},
+    {name = "Base.Soap", chance = 5},
+    {name = "Base.ToiletPaper", chance = 5},
 
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.BroccoliBagSeed", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.CabbageBagSeed", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.CarrotBagSeed", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.PotatoBagSeed", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.RedRadishBagSeed", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.StrewberrieBagSeed", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("farming.TomatoBagSeed", 2))
+    -- seeds
+    {name = "farming.BroccoliBagSeed", chance = 2},
+    {name = "farming.CabbageBagSeed", chance = 2},
+    {name = "farming.CarrotBagSeed", chance = 2},
+    {name = "farming.PotatoBagSeed", chance = 2},
+    {name = "farming.RedRadishBagSeed", chance = 2},
+    {name = "farming.StrewberrieBagSeed", chance = 2},
+    {name = "farming.TomatoBagSeed", chance = 2},
 
+    -- prepping
+    {name = "Base.WaterBottleFull", chance = 99},
+    {name = "Base.WhiskeyFull", chance = 22},
+    {name = "Base.DehydratedMeatStick", chance = 7},
+    {name = "Base.Chocolate", chance = 5},
+    {name = "Base.PeanutButter", chance = 4},
+
+    -- scavenged food
+    {name = "Base.TinnedBeans", chance = 1},
+    {name = "Base.CannedCarrots2", chance = 1},
+    {name = "Base.CannedChili", chance = 1},
+    {name = "Base.CannedCorn", chance = 1},
+    {name = "Base.CannedCornedBeef", chance = 1},
+    {name = "Base.CannedFruitCocktail", chance = 1},
+    {name = "Base.CannedMushroomSoup", chance = 1},
+    {name = "Base.CannedPeaches", chance = 1},
+    {name = "Base.CannedPeas", chance = 1},
+    {name = "Base.CannedPineapple", chance = 1},
+    {name = "Base.CannedPotato2", chance = 1},
+    {name = "Base.CannedSardines", chance = 1},
+    {name = "Base.TinnedSoup", chance = 1},
+    {name = "Base.CannedBolognese", chance = 1},
+    {name = "Base.CannedTomato2", chance = 1},
+
+    -- foraged
+    {name = "Base.TunaTin", chance = 1},
+    {name = "Base.Salami", chance = 1},
+    {name = "Base.Apple", chance = 4},
+    {name = "Base.Pear", chance = 2},
+    {name = "Base.Cherry", chance = 2},
+    {name = "Base.Lettuce", chance = 1},
+    {name = "Base.Grapes", chance = 9},
+    {name = "Base.Onion", chance = 5},
+    {name = "Base.MushroomGeneric1", chance = 19},
+    {name = "Base.MushroomGeneric2", chance = 19},
+    {name = "Base.BerryBlack", chance = 5},
+    {name = "Base.BerryBlue", chance = 4},
+    {name = "Base.WildEggs", chance = 19},
+    {name = "Base.WildGarlic", chance = 19},
+    {name = "Base.Frog", chance = 19},
+
+    -- fishing
+    {name = "Base.Catfish", chance = 5},
+    {name = "Base.Bass", chance = 5},
+    {name = "Base.Perch", chance = 5},
+    {name = "Base.Crappie", chance = 5},
+    {name = "Base.Panfish", chance = 5},
+    {name = "Base.Pike", chance = 5},
+    {name = "Base.Trout", chance = 5},
+    {name = "Base.BaitFish", chance = 5},
+
+    -- hunting
+    {name = "Base.DeadRabbit", chance = 5},
+    {name = "Base.DeadRat", chance = 5},
+    {name = "Base.DeadMouse", chance = 5},
+    {name = "Base.DeadSquirrel", chance = 5},
+    {name = "Base.DeadBird", chance = 5},
+
+    -- butchering
+    {name = "Base.Lard", chance = 5},
+
+    -- readiness
+    {name = "Base.FarmingMag1", chance = 4},
+    {name = "Base.HerbalistMag", chance = 4},
+
+    -- traps
+    {name = "Base.Rope", chance = 66},
+    {name = "Base.DuctTape", chance = 65},
+    {name = "Base.TrapSnare", chance = 10},
+    {name = "Base.TrapCage", chance = 10},
+    {name = "Base.TrapCrate", chance = 10},
+    {name = "Base.TrapStick", chance = 10},
+}
+
+-- seeds multiple modded
 if getActivatedMods():contains("MCM") then
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("MCM.AvocadoBagSeed", 2))
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("MCM.PepperBagSeed", 2))
@@ -113,31 +191,7 @@ if getActivatedMods():contains("FarmingTime") then
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("filcher.Cauliflower", 4))
 end
 
--- prepping
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.WhiskeyFull", 22))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DehydratedMeatStick", 7))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Chocolate", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.PeanutButter", 4))
-
--- scavenged food
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TinnedBeans", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedCarrots2", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedChili", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedCorn", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedFruitCocktail", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedMushroomSoup", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedPeaches", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedPeas", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedPineapple", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedPotato2", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedSardines", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TinnedSoup", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedBolognese", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedTomato2", 1))
-
--- rations
+-- rations multiple
 if getActivatedMods():contains("ExpandedHelicopterEvents") then
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 70))
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 20))
@@ -149,23 +203,7 @@ else
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 10))
 end
 
--- foraged
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TunaTin", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Salami", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Apple", 4))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Pear", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Cherry", 2))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Lettuce", 1))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Grapes", 9))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Onion", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Apple", 4))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.MushroomGeneric1", 19))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.MushroomGeneric2", 19))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.BerryBlack", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.BerryBlue", 4))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.WildEggs", 19))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.WildGarlic", 19))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Frog", 19))
+-- foraged multiple
 for _ = 1,2 do
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.LeatherStripsDirty", 30))
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.RippedSheetsDirty", 30))
@@ -174,39 +212,6 @@ for _ = 1,2 do
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.SharpedStone", 5))
     table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TreeBranch", 5))
 end
-
--- fishing
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Catfish", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Bass", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Perch", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Crappie", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Panfish", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Pike", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Trout", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.BaitFish", 5))
-
--- hunting
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DeadRabbit", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DeadRat", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DeadMouse", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DeadSquirrel", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DeadBird", 5))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DeadMouse", 5))
-
--- butchering
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Lard", 5))
-
--- readiness
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.FarmingMag1", 4))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.HerbalistMag", 4))
-
--- traps
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.Rope", 66))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.DuctTape", 65))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TrapSnare", 10))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TrapCage", 10))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TrapCrate", 10))
-table.insert(BanditClan.Prepper.Loot, BanditLoot.MakeItem("Base.TrapStick", 10))
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}

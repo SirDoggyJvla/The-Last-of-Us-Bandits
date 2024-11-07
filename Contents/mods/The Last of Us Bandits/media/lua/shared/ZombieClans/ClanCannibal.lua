@@ -1,6 +1,6 @@
 BanditClan = BanditClan or {}
 
-BanditClan.Cannibal = BanditClan.Cannibal or {}
+BanditClan.Cannibal = {}
 
 -- The unique id of the clan, ids 1-16 are reserved for waves
 BanditClan.Cannibal.id = 3
@@ -25,20 +25,23 @@ BanditClan.Cannibal.favoriteZones = {"Vegitation", "Farm", "FarmLand", "Ranch"}
 BanditClan.Cannibal.avoidZones = {"TownZone", "Nav"}
 
 -- available outfits
-BanditClan.Cannibal.Outfits = {}
-table.insert(BanditClan.Cannibal.Outfits, "Woodcut")
-table.insert(BanditClan.Cannibal.Outfits, "Camper")
+BanditClan.Cannibal.Outfits = {
+    "Camper",
+    "Generic01",
+    "Generic02",
+    "Generic03",
+    "PrivateMilitia",
+    "Survivalist",
+    "Survivalist03",
+}
 
 -- available melee weapons
-BanditClan.Cannibal.Melee = {}
-table.insert(BanditClan.Cannibal.Melee, "Base.MeatCleaver")
-table.insert(BanditClan.Cannibal.Melee, "Base.KitchenKnife")
-table.insert(BanditClan.Cannibal.Melee, "Base.BreadKnife")
-table.insert(BanditClan.Cannibal.Melee, "Base.Machete")
-
-if getActivatedMods():contains("Authentic Z - Current") then
-    table.insert(BanditClan.Cannibal.Melee, "AuthenticZClothing.Chainsaw")
-end
+BanditClan.Cannibal.Melee = {
+    "Base.HuntingKnife",
+    "Base.Machete",
+    "Base.HandAxe",
+    "Base.HandScythe",
+}
 
 -- available primary weapons
 BanditClan.Cannibal.Primary = BanditWeapons.Primary
@@ -47,58 +50,57 @@ BanditClan.Cannibal.Primary = BanditWeapons.Primary
 BanditClan.Cannibal.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.Cannibal.Loot = BanditClan.Cannibal.Loot or {}
+BanditClan.Cannibal.Loot = {
+    -- classic loot
+    {name = "Base.WaterBottleFull", chance = 30},
+    {name = "Base.WaterBottleEmpty", chance = 60},
+    {name = "Base.WristWatch_Left_DigitalBlack", chance = 50},
+    {name = "Base.HandTorch", chance = 100},
+    {name = "Base.Battery", chance = 88},
+    {name = "Base.Battery", chance = 77},
+    {name = "camping.CampfireKit", chance = 33},
+    {name = "Base.Cigarettes", chance = 10},
+    {name = "Base.Matches", chance = 90},
+    {name = "Base.CampingTentKit", chance = 88},
+    {name = "Base.HuntingKnife", chance = 80},
+    {name = "Radio.WalkieTalkieMakeShift", chance = 23},
+    {name = "Base.AlcoholBandage", chance = 33},
+    {name = "Base.AlcoholBandage", chance = 33},
+    {name = "Base.Disinfectant", chance = 55},
+    {name = "Base.Antibiotics", chance = 2},
+    {name = "Base.Pills", chance = 2},
 
--- classic loot
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 30))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.WaterBottleEmpty", 60))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_DigitalBlack", 50))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Battery", 77))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("camping.CampfireKit", 33))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Cigarettes", 10))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Matches", 90))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.CampingTentKit", 88))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 80))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 23))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Disinfectant", 55))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Antibiotics", 2))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Pills", 2))
+    -- additional loot
+    {name = "Base.TinOpener", chance = 2},
+    {name = "Base.Spoon", chance = 10},
+    {name = "Base.Pencil", chance = 10},
+    {name = "Base.Saucepan", chance = 2},
+    {name = "Base.Scissors", chance = 5},
+    {name = "Base.HandAxe", chance = 1},
 
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.TinOpener", 2))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Spoon", 10))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Pencil", 10))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Saucepan", 2))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Scissors", 5))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.HandAxe", 1))
+    -- cannibal loot
+    {name = "Base.Salt", chance = 12},
+    {name = "Base.Steak", chance = 60},
+    {name = "Base.Steak", chance = 44},
+    {name = "farming.BaconBits", chance = 44},
+    {name = "Base.Rope", chance = 66},
+    {name = "Base.DuctTape", chance = 65},
+    {name = "Base.TrapSnare", chance = 65},
+    {name = "Base.Saw", chance = 29},
+    {name = "Base.HandAxe", chance = 7},
+    {name = "Base.Machete", chance = 1},
+    {name = "Base.Fork", chance = 10},
 
--- cannibal loot
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Salt", 12))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Steak", 60))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Steak", 44))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("farming.BaconBits", 44))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Rope", 66))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.DuctTape", 65))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.TrapSnare", 65))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Saw", 29))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.HandAxe", 7))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Machete", 1))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Fork", 10))
-
--- lore
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Ring_Left_RingFinger_Gold", 30))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Necklace_SilverCrucifix", 25))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Necklace_Crucifix", 99))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.CatToy", 5))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.ToyCar", 5))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.Bricktoys", 5))
-table.insert(BanditClan.Cannibal.Loot, BanditLoot.MakeItem("Base.ToyBear", 1))
-
+    -- lore
+    {name = "Base.Ring_Left_RingFinger_Gold", chance = 30},
+    {name = "Base.Necklace_SilverCrucifix", chance = 25},
+    {name = "Base.Necklace_Crucifix", chance = 99},
+    {name = "Base.CatToy", chance = 5},
+    {name = "Base.ToyCar", chance = 5},
+    {name = "Base.Bricktoys", chance = 5},
+    {name = "Base.ToyBear", chance = 1},
+}
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}
 BanditCreator.ClanMap[3] = BanditClan.Cannibal
- 

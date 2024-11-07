@@ -1,12 +1,12 @@
 BanditClan = BanditClan or {}
 
-BanditClan.DesperateCitizen = BanditClan.DesperateCitizen or {}
+BanditClan.DesperateCitizen = {}
 
 -- The unique id of the clan, ids 1-16 are reserved for waves
 BanditClan.DesperateCitizen.id = 1
 
 -- Name of the clan
-BanditClan.DesperateCitizen.name = "Jackson's Community"
+BanditClan.DesperateCitizen.name = "Jackson Community"
 
 -- % chance of a clan member to be a female. Outfit must support it.
 BanditClan.DesperateCitizen.femaleChance = 50
@@ -25,21 +25,23 @@ BanditClan.DesperateCitizen.favoriteZones = {"Farm", "FarmLand", "Ranch"}
 BanditClan.DesperateCitizen.avoidZones = {}
 
 -- available outfits
-BanditClan.DesperateCitizen.Outfits = {}
-table.insert(BanditClan.DesperateCitizen.Outfits, "Camper")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Generic01")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Generic02")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Generic03")
-table.insert(BanditClan.DesperateCitizen.Outfits, "PrivateMilitia")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Survivalist")
-table.insert(BanditClan.DesperateCitizen.Outfits, "Survivalist03")
+BanditClan.DesperateCitizen.Outfits = {
+    "Camper",
+    "Generic01",
+    "Generic02",
+    "Generic03",
+    "PrivateMilitia",
+    "Survivalist",
+    "Survivalist03",
+}
 
 -- available melee weapons
-BanditClan.DesperateCitizen.Melee = {}
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.HuntingKnife")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.Machete")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.HandAxe")
-table.insert(BanditClan.DesperateCitizen.Melee, "Base.HandScythe")
+BanditClan.DesperateCitizen.Melee = {
+    "Base.HuntingKnife",
+    "Base.Machete",
+    "Base.HandAxe",
+    "Base.HandScythe",
+}
 
 -- available primary weapons
 BanditClan.DesperateCitizen.Primary = BanditWeapons.Primary
@@ -48,51 +50,59 @@ BanditClan.DesperateCitizen.Primary = BanditWeapons.Primary
 BanditClan.DesperateCitizen.Secondary = BanditWeapons.Secondary
 
 -- loot table
-BanditClan.DesperateCitizen.Loot = {}
+BanditClan.DesperateCitizen.Loot = {
+    -- classic loot
+    {name = "Base.WaterBottleFull", chance = 98},
+    {name = "Base.WristWatch_Left_DigitalBlack", chance = 50},
+    {name = "Base.HandTorch", chance = 100},
+    {name = "Base.Battery", chance = 88},
+    {name = "Base.Battery", chance = 77},
+    {name = "camping.CampfireKit", chance = 33},
+    {name = "Base.Cigarettes", chance = 10},
+    {name = "Base.Matches", chance = 90},
+    {name = "Base.CampingTentKit", chance = 88},
+    {name = "Base.HuntingKnife", chance = 80},
+    {name = "Radio.WalkieTalkieMakeShift", chance = 23},
+    {name = "Base.AlcoholBandage", chance = 33},
+    {name = "Base.AlcoholBandage", chance = 33},
+    {name = "Base.Disinfectant", chance = 55},
+    {name = "Base.Antibiotics", chance = 2},
+    {name = "Base.Pills", chance = 2},
+    {name = "Base.TinOpener", chance = 50},
+    {name = "Base.Spoon", chance = 40},
+    {name = "Base.Pencil", chance = 35},
+    {name = "Base.Saucepan", chance = 21},
+    {name = "Base.Scissors", chance = 17},
+    {name = "Base.HandAxe", chance = 17},
+    {name = "Base.Soap", chance = 5},
+    {name = "Base.ToiletPaper", chance = 5},
 
--- classic loot
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.WaterBottleFull", 99))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.WristWatch_Left_DigitalBlack", 50))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HandTorch", 100))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Battery", 88))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Battery", 77))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("camping.CampfireKit", 33))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Cigarettes", 10))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Matches", 90))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CampingTentKit", 88))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HuntingKnife", 80))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Radio.WalkieTalkieMakeShift", 23))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.AlcoholBandage", 33))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Disinfectant", 55))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Antibiotics", 2))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Pills", 2))
+    -- scavenged food
+    {name = "Base.TinnedBeans", chance = 1},
+    {name = "Base.CannedCarrots2", chance = 1},
+    {name = "Base.CannedChili", chance = 1},
+    {name = "Base.CannedCorn", chance = 1},
+    {name = "Base.CannedCornedBeef", chance = 1},
+    {name = "Base.CannedFruitCocktail", chance = 1},
+    {name = "Base.CannedMushroomSoup", chance = 1},
+    {name = "Base.CannedPeaches", chance = 1},
+    {name = "Base.CannedPeas", chance = 1},
+    {name = "Base.CannedPineapple", chance = 1},
+    {name = "Base.CannedPotato2", chance = 1},
+    {name = "Base.CannedSardines", chance = 1},
+    {name = "Base.TinnedSoup", chance = 1},
+    {name = "Base.CannedBolognese", chance = 1},
+    {name = "Base.CannedTomato2", chance = 1},
 
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.TinOpener", 50))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Spoon", 40))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Pencil", 35))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Saucepan", 21))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Scissors", 17))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.HandAxe", 17))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Soap", 5))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.ToiletPaper", 5))
+    -- lore
+    {name = "Base.Ring_Left_RingFinger_Gold", chance = 10},
+    {name = "Base.CatToy", chance = 5},
+    {name = "Base.ToyCar", chance = 5},
+    {name = "Base.Bricktoys", chance = 5},
+    {name = "Base.ToyBear", chance = 1},
+}
 
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.TinnedBeans", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCarrots2", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedChili", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCorn", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedFruitCocktail", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedMushroomSoup", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPeaches", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPeas", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPineapple", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedPotato2", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedSardines", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.TinnedSoup", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedBolognese", 1))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedTomato2", 1))
-
+-- rations modded
 if getActivatedMods():contains("ExpandedHelicopterEvents") then
     table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 70))
     table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.MealReadytoEatEHE", 20))
@@ -103,13 +113,6 @@ else
     table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 80))
     table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CannedCornedBeef", 10))
 end
-
--- lore
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Ring_Left_RingFinger_Gold", 10))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.CatToy", 5))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.ToyCar", 5))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.Bricktoys", 5))
-table.insert(BanditClan.DesperateCitizen.Loot, BanditLoot.MakeItem("Base.ToyBear", 1))
 
 -- register this clan for spawn system
 BanditCreator.ClanMap = BanditCreator.GroupMap or {}
