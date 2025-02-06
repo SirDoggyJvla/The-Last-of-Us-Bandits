@@ -2,7 +2,12 @@ version=1
 id=3361757337
 title=The Last of Us Bandits
 description=[quote]
+description=THIS MOD IS AN ADDON TO [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]BANDITS[/url]. REFER TO THE ORIGINAL MOD FOR THE GAMEPLAY MECHANICS.
+description=[/quote]
+description=[quote]
 description=In The Last of Us apocalypse, the infected are not the only threats. This mod is an addon for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url] which replaces some of the clans with The Last of Us factions.
+description=
+description=More faction specific outfits will come for each ! Currently only the Seraphites and FEDRA have their custom outfits thanks to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3348036710]The Last of Us: Factions & Gear[/url] but the other factions will come soon so they can wear the armbands of their factions for example.
 description=[/quote]
 description=
 description=[hr][/hr]
@@ -136,5 +141,5 @@ description=
 description=[url=https://discord.gg/SReMnbV4V7][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/PZmodCommBanner1.png[/img][/url]
 description=
 description=[url=https://discord.gg/VteSYrd4mW][img]https://raw.githubusercontent.com/SirDoggyJvla/Project-Overgrown/main/images/banners/server_banner.png[/img][/url]
-tags=Build 41;Hardmode;Misc;Multiplayer;Pop Culture
+tags=Build 41;Build 42;Hardmode;Misc;Multiplayer;Pop Culture
 visibility=public

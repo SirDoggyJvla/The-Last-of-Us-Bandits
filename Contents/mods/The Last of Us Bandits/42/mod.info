@@ -1,0 +1,9 @@
+name=Bandits: The Last of Us Factions
+id=TLOU_Factions
+description=The Last of Us Bandits is an addon for the NPC mod "Bandits (NPC)" which replaces some of its factions with new The Last of Us related factions.
+poster=preview.png
+authors=SirDoggyJvla
+icon=preview.png
+url=https://discord.gg/QTFTTaYyVW
+versionMin=42.0
+require=\Bandits,\TLOUClothingRest,\TLOUClothingFEDRA,\TLOUClothingSeraphites
